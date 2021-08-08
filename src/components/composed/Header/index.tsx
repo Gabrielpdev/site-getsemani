@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Container, Content } from './styles';
 
-import Hamburger from '../../../../public/icons/hamburger.svg';
+// import Hamburger from '../../../../public/icons/hamburger.svg';
 import ArrowLeft from '../../../../public/icons/arrow-left.svg';
 
 interface HeaderProps {
   isPost?: boolean;
 }
 
-export function Header({ isPost = false }: HeaderProps) {
+export function Header({ isPost = false }: HeaderProps): JSX.Element {
   const router = useRouter();
 
   return (

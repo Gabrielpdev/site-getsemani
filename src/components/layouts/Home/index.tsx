@@ -41,7 +41,7 @@ interface PageProps {
   home: HomeProps
 }
 
-export function Home({ sermons, home }: PageProps) {
+export function Home({ sermons, home }: PageProps): JSX.Element {
   const { 'buttons-group': buttonsGroup, 'thumbnail-group': thumbnailGroup } = home;
 
   return (

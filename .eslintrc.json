@@ -26,6 +26,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "no-undef":"off",
     "react/require-default-props": "off",
     "import/no-duplicates": "off",
     "jsx-a11y/anchor-is-valid": "off",

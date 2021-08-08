@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color: 'blue' | 'yellow';
 }
 
-export function Button({ children, color, ...rest }: ButtonProps) {
+export function Button({ children, color, ...rest }: ButtonProps): JSX.Element {
   return (
     <Container {...rest}>
       <Text>{children}</Text>

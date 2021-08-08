@@ -7,7 +7,7 @@ interface CardProps {
   alt: string;
 }
 
-export function Card({ title, image, alt }: CardProps) {
+export function Card({ title, image, alt }: CardProps): JSX.Element {
   return (
     <Container>
       <Image

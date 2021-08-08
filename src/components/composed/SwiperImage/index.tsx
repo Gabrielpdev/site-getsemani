@@ -21,7 +21,7 @@ interface SwiperImageProps {
   images: ImageProps[];
 }
 
-export function SwiperImage({ images }: SwiperImageProps) {
+export function SwiperImage({ images }: SwiperImageProps): JSX.Element {
   return (
     <Container>
       <Content

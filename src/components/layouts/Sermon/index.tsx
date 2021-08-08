@@ -28,7 +28,7 @@ interface PostProps {
   post: Post;
 }
 
-export function Sermon({ post }: PostProps) {
+export function Sermon({ post }: PostProps): JSX.Element {
   const formattedDate = format(
     new Date(post.first_publication_date),
     'dd LLLL yyyy',

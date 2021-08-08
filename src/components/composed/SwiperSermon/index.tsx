@@ -27,8 +27,7 @@ interface SwiperSermonProps {
   sermons: SermonsProps[]
 }
 
-export function SwiperSermon({ title, sermons }: SwiperSermonProps) {
-  console.log(sermons);
+export function SwiperSermon({ title, sermons }: SwiperSermonProps): JSX.Element {
   return (
     <Container>
       <Title>{title}</Title>

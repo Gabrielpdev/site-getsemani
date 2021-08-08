@@ -21,7 +21,7 @@ interface PostProps {
   post: Post;
 }
 
-export default function SermonPage(props: PostProps) {
+export default function SermonPage(props: PostProps): JSX.Element {
   return (<Sermon {...props} />);
 }
 

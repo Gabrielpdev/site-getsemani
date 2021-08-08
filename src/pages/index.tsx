@@ -5,7 +5,41 @@ import { getPrismicClient } from '../services/prismic';
 
 import { Home as HomeComponent } from '../components/layouts/Home';
 
-export default function Home(props) {
+interface PostProps {
+  title: string;
+  thumbnail: {
+    url: string;
+    alt: string;
+  }
+}
+
+interface SermonProps {
+  uid: string;
+  first_publication_date: string;
+  data: PostProps;
+}
+
+interface HomeProps {
+  'buttons-group' : {
+    title: {
+      text: string;
+    }[];
+    color: 'blue' | 'yellow';
+  }[];
+  'thumbnail-group': {
+    image1: {
+      alt: string;
+      url: string;
+    }
+  }[];
+}
+
+interface PageProps {
+  sermons: SermonProps[];
+  home: HomeProps
+}
+
+export default function Home(props: PageProps): JSX.Element {
   return (<HomeComponent {...props} />);
 }
 
