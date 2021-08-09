@@ -1,8 +1,8 @@
 {
-  "name": "Podcastr",
-  "short_name": "Podcastr",
-  "theme_color": "#8257E5",
-  "background_color": "#F7F8FA",
+  "name": "Getsêmani",
+  "short_name": "Getsêmani",
+  "theme_color": "#2F2F2F", 
+  "background_color": "#000",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
