@@ -2,8 +2,8 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Prismisc from '@prismicio/client';
 import { RichTextBlock } from 'prismic-reactjs';
 
-import { getPrismicClient } from '../services/prismic';
-import { Sermon } from '../components/layouts/Sermon';
+import { getPrismicClient } from '../../services/prismic';
+import { Sermon } from '../../components/layouts/Sermon';
 
 interface Post {
   first_publication_date: string | null;
@@ -21,16 +21,16 @@ interface PostProps {
   post: Post;
 }
 
-export default function SermonPage(props: PostProps): JSX.Element {
+export default function MinisterialNetworksSlug(props: PostProps): JSX.Element {
   return (<Sermon {...props} />);
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const prismic = getPrismicClient();
   const postsPagination = await prismic.query(
-    [Prismisc.predicates.at('document.type', 'sermon')],
+    [Prismisc.predicates.at('document.type', 'ministerial_networks')],
     {
-      fetch: ['sermon.title', 'sermon.content', 'sermon.thumbnail'],
+      fetch: ['ministerial_networks.title', 'ministerial_networks.content', 'ministerial_networks.thumbnail'],
       pageSize: 5,
     },
   );

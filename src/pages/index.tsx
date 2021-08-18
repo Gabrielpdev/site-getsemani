@@ -70,5 +70,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { sermons: results, home: homePage.results[0].data },
+    revalidate: 60,
   };
 };

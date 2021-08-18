@@ -52,6 +52,8 @@ export function Sermon({ post }: PostProps): JSX.Element {
       <Image
         src={post.data.thumbnail.url}
         alt={post.data.thumbnail.alt}
+        placeholder="blur"
+        blurDataURL={post.data.thumbnail.url}
         width={500}
         height={300}
         layout="responsive"

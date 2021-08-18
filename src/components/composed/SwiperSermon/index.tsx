@@ -17,7 +17,6 @@ interface PostProps {
 }
 
 interface SermonsProps {
-  first_publication_date: string;
   uid: string;
   data: PostProps;
 }
@@ -38,7 +37,7 @@ export function SwiperSermon({ title, sermons }: SwiperSermonProps): JSX.Element
       >
         {sermons.map((sermon) => (
           <SwiperSlide key={sermon.uid}>
-            <Link href={sermon.uid}>
+            <Link href={`/palavra/${sermon.uid}`}>
               <a>
                 <Card
                   title={sermon.data.title}

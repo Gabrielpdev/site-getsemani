@@ -1,7 +1,10 @@
-const withPWA = require('next-pwa')
-const runtimeCaching = require('next-pwa/cache')
+const withPwa =
+  process.env.NODE_ENV === 'development' ? (arg) => arg : require('next-pwa');
 
-module.exports = withPWA({
+const runtimeCaching =
+  process.env.NODE_ENV === 'development' ? (arg) => arg : require('next-pwa/cache');
+
+module.exports = withPwa({
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

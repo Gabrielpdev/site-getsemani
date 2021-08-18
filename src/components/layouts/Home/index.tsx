@@ -1,9 +1,7 @@
-import { v4 } from 'uuid';
-
 import { Header } from '../../composed/Header';
 import { SwiperImage } from '../../composed/SwiperImage';
 import { SwiperSermon } from '../../composed/SwiperSermon';
-import { Button } from '../../core/Button';
+import { Link } from '../../core/Link';
 
 import { Container, ButtonsContent } from './styles';
 
@@ -22,12 +20,6 @@ interface SermonProps {
 }
 
 interface HomeProps {
-  'buttons-group' : {
-    title: {
-      text: string;
-    }[];
-    color: 'blue' | 'yellow';
-  }[];
   'thumbnail-group': {
     image1: {
       alt: string;
@@ -42,7 +34,7 @@ interface PageProps {
 }
 
 export function Home({ sermons, home }: PageProps): JSX.Element {
-  const { 'buttons-group': buttonsGroup, 'thumbnail-group': thumbnailGroup } = home;
+  const { 'thumbnail-group': thumbnailGroup } = home;
 
   return (
     <Container>
@@ -50,15 +42,30 @@ export function Home({ sermons, home }: PageProps): JSX.Element {
       <SwiperImage images={thumbnailGroup} />
 
       <ButtonsContent>
-        {buttonsGroup.map((button) => (
-          <Button
-            key={v4()}
-            color={button.color}
-          >
-            {button.title[0].text}
-
-          </Button>
-        ))}
+        <Link
+          href="/redes-ministeriais"
+          color="yellow"
+        >
+          Redes Ministérias
+        </Link>
+        <Link
+          href="/agenda"
+          color="blue"
+        >
+          Agenda
+        </Link>
+        <Link
+          href="/contato"
+          color="blue"
+        >
+          Contato
+        </Link>
+        <Link
+          href="/dizimos-e-ofertas"
+          color="yellow"
+        >
+          Dizimos e Ofertas
+        </Link>
       </ButtonsContent>
 
       <SwiperSermon title="Palavra" sermons={sermons} />

@@ -23,6 +23,8 @@ export function Header({ isPost = false }: HeaderProps): JSX.Element {
             <Image
               src="/img/logo.png"
               alt="Logo da igreja batista getsemani"
+              placeholder="blur"
+              blurDataURL="/img/logo.png"
               width="250"
               height="85"
             />

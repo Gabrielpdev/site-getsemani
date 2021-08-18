@@ -4,7 +4,7 @@ interface TraceProps {
   color: 'blue' | 'yellow';
 }
 
-export const Container = styled.button`
+export const Container = styled.a`
   padding: 1.6rem;
   border-radius: 1rem;
 
