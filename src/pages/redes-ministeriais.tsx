@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
 import Prismisc from '@prismicio/client';
 
-import { getPrismicClient } from '../../services/prismic';
-import { Ministerials } from '../../components/layouts/Ministerials';
+import { getPrismicClient } from '../services/prismic';
+import { Ministerials } from '../components/layouts/Ministerials';
 
 interface MinisterialProps {
   time: string;
@@ -11,6 +11,10 @@ interface MinisterialProps {
     latitude: number;
     longitude: number;
   }
+  color: 'blue' | 'yellow';
+  number: string;
+  street: string;
+  district: string;
 }
 
 interface PostProps {
