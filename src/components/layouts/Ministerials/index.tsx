@@ -27,7 +27,6 @@ interface MinisterialsProps {
 }
 
 export function Ministerials({ ministerials }: MinisterialsProps): JSX.Element {
-  console.log(ministerials);
   return (
     <Container>
       <Header />
