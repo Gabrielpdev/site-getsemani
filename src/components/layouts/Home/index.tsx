@@ -10,6 +10,10 @@ interface PostProps {
   thumbnail: {
     url: string;
     alt: string;
+    dimensions: {
+      width: number;
+      height: number;
+    }
   }
 }
 

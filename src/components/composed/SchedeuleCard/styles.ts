@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 
 interface TraceProps {
   color: 'blue' | 'yellow';
@@ -21,10 +20,10 @@ export const Title = styled.div`
   letter-spacing: 0em;
   text-align: center;
 
-  margin-bottom: 1.4rem;
+  margin: 1rem 0 1.4rem;
 `;
 
-export const Date = styled.div`
+export const Subtype = styled.div`
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 700;
@@ -33,6 +32,7 @@ export const Date = styled.div`
   text-align: left;
 
   margin-bottom: 2rem;
+  text-transform: capitalize;
 `;
 
 export const Content = styled.div`
@@ -43,13 +43,17 @@ export const Content = styled.div`
   margin-bottom: 1rem;
 `;
 
-export const Button = styled(Link)`
+export const Link = styled.a`
   width: 4.2rem;
   height: 4.2rem;
 
   background-color: rgba(0, 0, 0, 0.3);
   border-radius : 1rem;
   border: 1px solid ${({ theme }) => theme.colors.back};
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
 
   svg {
     width: 3.2rem;

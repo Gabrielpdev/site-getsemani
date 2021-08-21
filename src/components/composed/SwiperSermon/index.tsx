@@ -13,6 +13,10 @@ interface PostProps {
   thumbnail: {
     url: string;
     alt: string;
+    dimensions: {
+      width: number;
+      height: number;
+    }
   }
 }
 
@@ -40,9 +44,9 @@ export function SwiperSermon({ title, sermons }: SwiperSermonProps): JSX.Element
             <Link href={`/palavra/${sermon.uid}`}>
               <a>
                 <Card
-                  title={sermon.data.title}
-                  image={sermon.data.thumbnail.url}
-                  alt={sermon.data.thumbnail.alt}
+                  hasImage
+                  thumbnail={sermon.data.thumbnail}
+                  footerText={sermon.data.title}
                 />
               </a>
             </Link>

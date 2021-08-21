@@ -10,6 +10,10 @@ interface PostProps {
   thumbnail: {
     url: string;
     alt: string;
+    dimensions: {
+      width: number;
+      height: number;
+    }
   }
 }
 
@@ -30,6 +34,10 @@ interface HomeProps {
     image1: {
       alt: string;
       url: string;
+      dimensions: {
+        width: number;
+        height: number;
+      }
     }
   }[];
 }
