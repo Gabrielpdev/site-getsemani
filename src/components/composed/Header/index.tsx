@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -34,6 +34,10 @@ export function Header({ isPost = false }: HeaderProps): JSX.Element {
   const router = useRouter();
 
   const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
+
+  useEffect(() => {
+    document.querySelector('body').style.overflow = 'unset';
+  }, []);
 
   function showSideMenu() {
     setIsSideMenuVisible(true);
