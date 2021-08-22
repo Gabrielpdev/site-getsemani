@@ -24,13 +24,13 @@ export function Card({
   return (
     <Container>
       {hasImage && (
-      <Image
-        src={thumbnail.url}
-        alt={thumbnail.alt}
-        width={thumbnail.dimensions.width}
-        height={thumbnail.dimensions.height}
-        layout="responsive"
-      />
+        <Image
+          src={thumbnail.url}
+          alt={thumbnail.alt}
+          width={thumbnail.dimensions.width}
+          height={thumbnail.dimensions.height}
+          layout="responsive"
+        />
       )}
       {children}
       {footerText && (

@@ -8,6 +8,17 @@ export const Container = styled.div`
   }
 `;
 
+export const Title = styled.div`
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.0rem;
+  letter-spacing: 0em;
+  text-align: center;
+
+  margin: 1rem 0 1.4rem;
+`;
+
 export const Footer = styled.div`
   position: absolute;
   bottom: 0;
