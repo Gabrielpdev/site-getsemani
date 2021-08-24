@@ -25,7 +25,7 @@ interface PageProps {
 export function Contact({ contact }: PageProps): JSX.Element {
   return (
     <Container>
-      <Header isPost />
+      <Header isPost title="Contato" />
 
       <Image
         src={contact.thumbnail.url}

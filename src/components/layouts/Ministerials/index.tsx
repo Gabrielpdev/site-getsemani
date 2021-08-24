@@ -25,7 +25,7 @@ interface MinisterialsProps {
 export function Ministerials({ ministerials }: MinisterialsProps): JSX.Element {
   return (
     <Container>
-      <Header isPost />
+      <Header isPost title="Redes Ministeriais" />
 
       <CardsContainer>
         {ministerials.group.map((ministerial, index) => (

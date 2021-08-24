@@ -46,7 +46,7 @@ export function Offer({
 
   return (
     <Container>
-      <Header isPost />
+      <Header isPost title="Dízimos e Ofertas" />
 
       <Image
         src={tithe.thumbnail.url}

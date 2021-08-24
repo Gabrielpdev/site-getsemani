@@ -3,10 +3,10 @@ import { RichText, RichTextBlock } from 'prismic-reactjs';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
-import { Header } from '../../composed/Header';
+import { Header } from '../../../composed/Header';
 
-import Calendar from '../../../../public/icons/calendar.svg';
-import Clock from '../../../../public/icons/clock.svg';
+import Calendar from '../../../../../public/icons/calendar.svg';
+import Clock from '../../../../../public/icons/clock.svg';
 
 import {
   Container, Content, Title, DateContent,

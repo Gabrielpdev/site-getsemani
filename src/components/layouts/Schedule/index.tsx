@@ -33,7 +33,7 @@ interface ScheduleProps {
 export function Schedule({ schedule }: ScheduleProps): JSX.Element {
   return (
     <Container>
-      <Header isPost />
+      <Header isPost title="Agenda" />
 
       <CardsContainer>
         {schedule.group.map((ministerial, index) => (

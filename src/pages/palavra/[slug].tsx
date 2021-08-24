@@ -3,7 +3,7 @@ import Prismisc from '@prismicio/client';
 import { RichTextBlock } from 'prismic-reactjs';
 
 import { getPrismicClient } from '../../services/prismic';
-import { Sermon } from '../../components/layouts/Sermon';
+import { Sermon } from '../../components/layouts/Sermons/Sermon';
 
 interface Post {
   first_publication_date: string | null;

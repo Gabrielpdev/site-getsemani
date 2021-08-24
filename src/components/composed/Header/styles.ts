@@ -44,6 +44,10 @@ export const Content = styled.div`
     height: 2.5rem;
     width: 2.5rem;
   }
+
+  h1 {
+    color: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export const SideMenu = styled.div<SideMenuProps>`

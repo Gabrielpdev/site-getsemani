@@ -28,9 +28,10 @@ import {
 
 interface HeaderProps {
   isPost?: boolean;
+  title?: string;
 }
 
-export function Header({ isPost = false }: HeaderProps): JSX.Element {
+export function Header({ isPost = false, title }: HeaderProps): JSX.Element {
   const router = useRouter();
 
   const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
@@ -131,18 +132,22 @@ export function Header({ isPost = false }: HeaderProps): JSX.Element {
 
       <Content>
         {isPost ? <ArrowLeft onClick={router.back} /> : <Hamburger onClick={showSideMenu} />}
-        <Link href="/">
-          <a>
-            <Image
-              src="/img/logo.png"
-              alt="Logo da igreja batista getsemani"
-              placeholder="blur"
-              blurDataURL="/img/logo.png"
-              width="250"
-              height="85"
-            />
-          </a>
-        </Link>
+        {title ? (
+          <h1>{title}</h1>
+        ) : (
+          <Link href="/">
+            <a>
+              <Image
+                src="/img/logo.png"
+                alt="Logo da igreja batista getsemani"
+                placeholder="blur"
+                blurDataURL="/img/logo.png"
+                width="250"
+                height="85"
+              />
+            </a>
+          </Link>
+        )}
       </Content>
     </Container>
   );
