@@ -2,9 +2,6 @@ import { v4 } from 'uuid';
 import { Header } from '../../composed/Header';
 import { MinisterialCard } from '../../composed/MinisterialCard';
 
-// import Hamburger from '../../../../public/icons/hamburger.svg';
-// import ArrowLeft from '../../../../public/icons/arrow-left.svg';
-
 import { Container, CardsContainer } from './styles';
 
 interface MinisterialProps {

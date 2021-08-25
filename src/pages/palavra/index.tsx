@@ -22,10 +22,10 @@ interface Post {
 
 interface PostProps {
   sermons: Post[];
+  next_page: string;
 }
 
 export default function SermonsPage(props: PostProps): JSX.Element {
-  console.log(props);
   return (<Sermons {...props} />);
 }
 
@@ -36,11 +36,11 @@ export const getStaticProps: GetStaticProps = async () => {
     [Primisc.predicates.at('document.type', 'sermon')],
     {
       fetch: ['sermon.title', 'sermon.content', 'sermon.thumbnail'],
-      pageSize: 5,
+      pageSize: 1,
     },
   );
 
-  const results = response?.results?.map((post) => ({
+  const sermons = response?.results?.map((post) => ({
     uid: post.uid,
     first_publication_date: post.first_publication_date,
     data: {
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }));
 
   return {
-    props: { sermons: results },
+    props: { ...response, sermons },
     revalidate: 60, // 1 dia
   };
 };

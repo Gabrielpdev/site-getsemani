@@ -14,6 +14,7 @@ import Info from '../../../../public/icons/info.svg';
 import Facebook from '../../../../public/icons/facebook.svg';
 import Instagram from '../../../../public/icons/instagram.svg';
 import YouTube from '../../../../public/icons/youtube.svg';
+import Confetti from '../../../../public/icons/confetti.svg';
 
 import {
   Container,
@@ -120,6 +121,14 @@ export function Header({ isPost = false, title }: HeaderProps): JSX.Element {
             <a>
               <Book />
               Palavra
+            </a>
+          </Link>
+        </Item>
+        <Item>
+          <Link href="/aniversariantes">
+            <a>
+              <Confetti />
+              Aniversariantes
             </a>
           </Link>
         </Item>
