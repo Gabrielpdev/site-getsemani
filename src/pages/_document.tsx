@@ -41,6 +41,11 @@ export default class MyDocument extends Document {
 
           <link rel="apple-touch-icon" href="/apple-icon.png" />
           <meta name="theme-color" content="#2F2F2F" />
+
+          <link rel="apple-touch-icon" href="/pwa-icon/128x128.png" />
+          <link rel="apple-touch-icon" sizes="152x152" href="/pwa-icon/128x128.png" />
+          <link rel="apple-touch-icon" sizes="167x167" href="/pwa-icon/152x152.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/pwa-icon/192x192.png" />
         </Head>
 
         <body>
